@@ -164,6 +164,64 @@ td:first-child
     font-weight: bold;
     background: #bde1ff;
 }
+
+/* Conatct Style */
+.phone-mail
+{
+    
+    padding-bottom: 50px;
+    font-family:Arial,Helvetica, sans-serif;
+    padding-left: 65px;
+    font-weight: bold;
+    
+}
+.phone-mail .phone #phone-text:first-child
+{
+    font-weight: bolder;
+}
+.phone-mail .email #email-text:first-child
+{
+    font-weight: bolder;
+}
+legend
+{
+    font-weight: bold;
+    color: #09b0f1;
+}
+label
+{
+    display: block;
+    margin: 15px 0 0 0;
+}
+input
+{
+    width: 30px;
+}
+input[type="radio"]
+{
+    width: 25px;
+}
+textarea
+{
+    width: 500px;
+}
+input[type=submit] {
+    width: 100px;
+    background-color: #60c5ec;
+    color: white;
+    padding: 14px 20px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+}
+input[type=submit]:hover {
+    background-color: #09b0f1;
+}
+
+
+
 /* Footer */
 footer
 {
