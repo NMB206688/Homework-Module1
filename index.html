@@ -28,6 +28,10 @@
                         </nav>
                     </div>
                 </header>
+                <section class="timeofday">
+                    <span>Your Current Local Time: </span>
+                    <span id="clock"></span>
+                </section>
                 <main>
                 <div class="text-section">
                     <h2>
@@ -46,7 +50,7 @@
                     <h3>Where are these cliffs?</h3>
                     <p>Located within a 100mile radius from Irvine,Caifornia, they can be reached by roads easily.The closest west cliff , which is the most popular and most visited.</p>
                 </div>             
-            <section>
+             <section>
                 <ul id="partners">
                     <li class="partner">
                         <img src="images/partners/partner-bustour.png" alt="Partner Bus Tours">
@@ -86,5 +90,48 @@
                     All contents are not Intenetd for any commericial gain or use.</p>
             </div>
         </footer>
+        <!--==== JS Script here====-->
+        <script>
+            function CurrentTime() {
+                // Declare variables
+                var d = new Date(); //Get Current Date
+                var hr = d.getHours(); //Get Current Hours
+                var min = d.getMinutes(); //Get Current Minutes
+                var sec = d.getSeconds(); //Get Current seconds
+                var ampm; //Declare Emty variable to store AM or PM
+
+                //Add 0to single digits for seconds
+                if (sec < 10){
+                    sec = "0" + sec;
+                }
+                //Add 0 to single digits for minutes
+                if(min <10){
+                    min = "0" + min;
+                }
+
+                //Determine Am or PM
+                if(hr == 12){
+                    ampm = "PM"; // set to PM
+                }else if (hr > 12) {
+                    hr -= 12; // Deduct 12 from hours greater than 12(miltary time)
+                    ampm = "PM"; //Set to PM
+                }else {
+                    ampm = "AM"; // set to AM
+                }
+
+                // Assemble time format to display
+                var time = hr + ":" + min + ":" + sec + " " + ampm;
+
+                //Display current local time and time  zone on HTML Elements
+                document.getElementById("clock").innerText = time; // addding time
+
+                //Runtime data function every 1 Second
+                setInterval(CurrentTime, 1000); // setting timer
+
+            }
+            // Initial run of time data function.
+            CurrentTime();
+
+        </script>
     </body>
 </html>
