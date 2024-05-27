@@ -343,8 +343,8 @@ footer .nondisclaimer .social .fa-instagram
    font-weight: bold;
    padding: 30px;
    font-family: Arial, Helvetica, sans-serif;
-   background: rgb(34,193,195);
-   background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(230,191,107,1) 100%);
+   background: rgb(237,207,132);
+   background: linear-gradient(0deg, rgba(237,207,132,1) 0%, rgba(186,232,216,1) 70%, rgba(13,224,194,1) 100%);
    text-align: center;
 }
 #clock
