@@ -228,7 +228,7 @@ textarea
 }
 input[type=submit] {
     width: 100px;
-  background-color: #53abf3;
+  /*background-color: #53abf3;*/
   color: white;
   padding: 14px 20px;
   margin: 5px 0;
