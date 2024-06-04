@@ -41,3 +41,5 @@ document.addEventListener("DOMContentLoaded", function () {
     // Append the <section> element to the <main> element in the document
     document.querySelector('main').appendChild(partnersSection);
 });
+
+
