@@ -1,50 +1,45 @@
+// Generate a random code
+function generateCode() {
+    var code = ''; // Initialize an empty string for the code
+    var str = 'ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghijklmnopqrstuvwxyz0123456789'; // Possible characters
 
-
-
-function generateCode(){
-    var code = '';
-    var str ='ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghijklmnopqrstuvwxyz0123456789';
-
-    for(i=1; i<= 8; i++)
-        {
-            var char=Math.random() * str.length;
-            code += str.charAt(char)
-        }
-        return code;
+    // Loop to generate an 8-character code
+    for (var i = 0; i < 8; i++) {
+        var char = Math.floor(Math.random() * str.length); // Get a random index
+        code += str.charAt(char); // Append the character at the random index to the code
+    }
+    return code; // Return the generated code
 }
-document.getElementById("codes").innerHTML = generateCode();
 
-var code = '';
-var getCode ='';
-var btnvalue;
-var str ='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-var btnvalue;
+// Display the generated code and store it in a variable
+var generatedCode = generateCode(); // Generate and store the code in a variable
+document.getElementById("codes").innerHTML = generatedCode; // Display the code in the element with ID 'codes'
 
-function disableButton(btnvalue){
-    document.getElementById("submit").disabled = btnvalue;
-    if(btnvalue == true){
+// Function to enable or disable the submit button
+function disableButton(btnvalue) {
+    var submitButton = document.getElementById("submit"); // Get the submit button element
+    submitButton.disabled = btnvalue; // Enable or disable the button based on btnvalue
+    if (btnvalue) { // If the button is disabled
+        submitButton.style.backgroundColor = "rgba(73, 119, 209, 0.3)"; // Change background to light color
+        submitButton.style.color = "rgba(255, 255, 255, 0.5)"; // Change text color to light
+    } else { // If the button is enabled
+        submitButton.style.backgroundColor = "rgba(73, 119, 209, 1)"; // Change background to vivid color
+        submitButton.style.color = "rgba(255, 255, 255, 1)"; // Change text color to white
+    }
+}
 
-        document.getElementById("submit").style.backgroundColor= "rgba(73, 119, 209, 0.3)";
-        document.getElementById("submit").style.color = "rgba(255, 255, 255, 0.5)";
+// Initialize by disabling the submit button
+disableButton(true); // Disable the submit button when the page loads
 
+// Evaluate the entered code
+function evaluateCode() {
+    var getCode = document.getElementById("codeentered").value.trim(); // Get and trim the entered code
+    if (getCode.length === generatedCode.length && getCode === generatedCode) { // Check if codes match
+        disableButton(false); // Enable the submit button if codes match
     } else {
-        document.getElementById("submit").style.backgroundColor ="rgba(73, 119, 209, 1)";
-        document.getElementById("submit").style.color ="rgba(255, 255, 255, 1)";
+        disableButton(true); // Ensure the button stays disabled if the code doesn't match
     }
 }
 
-
-var codebox = document.getElementById('codeentered');
-codebox.addEventListener("input",evaluateCode);
-
-function evaluateCode (){
-    getCode = document.getElementById("codeentered").value;
-    var charset1 = getCode.trim();
-    var charset2 = code.trim();
-
-    if (charset1.length == charset2.length && charset1 == charset2){
-        disableButton(false);
-    }
-}
-
-
+// Add an event listener to the input box for evaluating the code
+document.getElementById('codeentered').addEventListener("input", evaluateCode); // Call evaluateCode on input
