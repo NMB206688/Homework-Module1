@@ -161,6 +161,12 @@ td:first-child {
     font-weight: bold;
     background: #bde1ff;
 }
+.selectable:hover {
+    cursor: pointer;
+}
+.highlighted {
+    background-color: rgb(176, 247, 12); /* Highlight color */
+}
 
 main {
     padding-bottom: 3em; /* Added padding to the main section */

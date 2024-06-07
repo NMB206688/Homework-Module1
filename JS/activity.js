@@ -9,5 +9,8 @@ $(document).ready(function() { // Ensure the script runs only after the document
         }
     );
 
-    
+    // Toggle highlight on click
+    $('.selectable').click(function() { // Function to run when a selectable cell is clicked
+        $(this).toggleClass('highlighted'); // Toggle the 'highlighted' class on the clicked cell
+    });
 });
