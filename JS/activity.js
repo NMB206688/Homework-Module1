@@ -19,7 +19,9 @@ $(document).ready(function() {
             // Loop through each selected activity and add it to the display box
             selectedActivities.each(function() {
                 var activityName = $(this).text();
-                resultBox.append('<p>' + activityName + '</p>');
+                var columnIndex = $(this).index();
+                var cliffSite = $('table thead th').eq(columnIndex).text();
+                resultBox.append('<p>' + activityName + ' - at ' + cliffSite + '</p>');
             });
         } else {
             // Hide the display box if no activities are selected
