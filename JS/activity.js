@@ -21,7 +21,7 @@ $(document).ready(function() {
                 var activityName = $(this).text();
                 var columnIndex = $(this).index();
                 var cliffSite = $('table thead th').eq(columnIndex).text();
-                resultBox.append('<p>' + activityName + ' - at ' + cliffSite + '</p>');
+                resultBox.append('<p>' + activityName + ' -  at ' + cliffSite + '</p>');
             });
         } else {
             // Hide the display box if no activities are selected
