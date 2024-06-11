@@ -1,31 +1,25 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
         <!--==== Font Awesome ====-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
         <title>Great_Cliffs_Website</title>
         <!--==== External Style Method ====-->
         <link rel="stylesheet" href="style.css">
-        
-
     </head>
     <body id="cliffs">
         <div class="conatiner">
             <header>
-                    
                 <div class="main-header">
                     <div class="logo">
                         <img src="images/logo.png" alt="Great Cliffs Logo" width="125">
-
                     </div>
                     <nav class="main-menu">
                         <ul>
-                            <li class="active" ><a href="index.html">Home</a></li>    
+                            <li class="active"><a href="index.html">Home</a></li>    
                             <li><a href="cliffs.html">Cliffs</a></li>
                             <li><a href="activities.html">Events</a></li> 
                             <li><a href="contact.html">Contact</a></li>
@@ -42,33 +36,29 @@
                     Each of these cliffs have their own uniqueness and beauty: West Cliff, North Cliff, East Cliff and South Cliff are the pride of California. 
                     Each cliff has many amenities to offer visitors such as recreational areas, camping sites, wildlife watch spots and overnight cabins.
                 </p>
-                    <p>
-                        No matter which direction you head from Irvine, California, 
+                <p>
+                    No matter which direction you head from Irvine, California, 
                     the sites are easily reached within a 100 mile radius. West Cliff is the most popular among Westcliff University campus students because
-                     of its close proximity.
-                    </p> 
-                
-
-                
+                    of its close proximity.
+                </p> 
             </div>
-            <div class="image-container">
-                <figure>
+            <div class="image-container" id="gallery">
+                <figure id="photo">
                     <figcaption>West Cliff</figcaption>
-                    <img src="images/cliff-west-sea.jpg" alt="Image 1">
+                    <a href="#"><img class="lightbox-toggle" src="images/cliff-west-sea.jpg" alt="West Cliff"></a>
                 </figure>
-                <figure>
+                <figure id="photo">
                     <figcaption>North Cliff</figcaption>
-                    <img src="images/cliff-north-mountain.jpg" alt="Image 2">
+                    <a href="#"><img class="lightbox-toggle" src="images/cliff-north-mountain.jpg" alt="North Cliff"></a>
                 </figure>
-                <figure>
+                <figure id="photo">
                     <figcaption>East Cliff</figcaption>
-                    <img src="images/cliff-east-river.jpg" alt="Image 3">
+                    <a href="#"><img class="lightbox-toggle" src="images/cliff-east-river.jpg" alt="East Cliff"></a>
                 </figure>
-                <figure>
+                <figure id="photo">
                     <figcaption>South Cliff</figcaption>
-                    <img src="images/cliff-south-canyon.jpg" alt="Image 4">
+                    <a href="#"><img class="lightbox-toggle" src="images/cliff-south-canyon.jpg" alt="South Cliff"></a>
                 </figure>
-        
             </div> 
         </main>
         <footer>
@@ -83,12 +73,17 @@
                 </div>
             </div>
             <div class="disclaimer">
-                
-                <p>This website is designed and create solely for education Purpose onlt at Westcliff University .
+                <p>This website is designed and create solely for education Purpose only at Westcliff University.
                     All contents are not Intenetd for any commericial gain or use.</p>
-
             </div>
         </footer>
+        <!-- Lightbox Structure -->
+        <div class="backdrop"></div>
+        <div class="box">
+            <span class="close">&times;</span>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="JS/site_script.js"></script>
+        <script src="JS/lightbox.js"></script>
     </body>
 </html>
