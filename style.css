@@ -1,3 +1,5 @@
+/* Existing styles here */
+
 header {
     width: 100%;
     min-height: 400px;
@@ -147,7 +149,7 @@ td:first-child {
 main {
     padding-bottom: 3em; /* Added padding to the main section */
 }
-/* Conatct Style */
+/* Contact Style */
 .phone-mail {
     padding-bottom: 50px;
     font-family: Arial, Helvetica, sans-serif;
@@ -338,3 +340,44 @@ footer .nondisclaimer .social .fa-instagram {
 .box img {
     width: 100%;
 }
+
+/* Existing styles here */
+
+/* Existing styles here */
+
+/* Display Box Styles */
+#activities main #displaySelected {
+    visibility: hidden;
+    margin: 0 auto 20px auto; /* Added bottom margin */
+    width: 600px;
+    border: 2px solid #9ed034;
+    padding: 0.75em;
+}
+
+#activities main #displaySelected #result, 
+#activities main #displaySelected #sendinfo {
+    display: inline-block;
+    margin: 0;
+}
+
+#activities main #result {
+    min-height: 50px;
+    width: 300px;
+    padding: 0;
+}
+
+#activities main #result h4 {
+    margin-bottom: 1em;
+    font-size: 1.15em;
+}
+
+#activities main #displaySelected #sendinfo input[type="email"] {
+    width: 200px;
+}
+
+/* Highlighted activity style */
+.highlighted {
+    background-color: #8ff709; /* Highlight color */
+}
+
+/* Existing styles here */
