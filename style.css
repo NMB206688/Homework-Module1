@@ -7,103 +7,145 @@ header {
 }
 #home header {
     background: no-repeat lightgrey url(images/cliff_ocean.jpg);
-    background-size: 100%;          
+    background-size: cover;          
 }
 #activities header {
     background: no-repeat lightgrey url(images/runfly.jpg);
-    background-size: 100%;
+    background-size: cover;
 }
 #contact header {
     background: no-repeat lightgrey url(images/cliff_rock.jpg);
-    background-size: 100%;
+    background-size: cover;
 }
 #cliffs header {
     background: no-repeat lightgrey url(images/forest_cliff.jpg);
-    background-size: 100%;
+    background-size: cover;
 }
+/* Styles for the main header which includes the logo and navigation for large screens */
 .main-header {
-    background-color: rgb(255, 255, 255, 0.8);
-    width: 700px;
-    margin: 2em auto 0 auto;
-    min-height: 100px;
-    height: 100px;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1em; /* Reduced padding */
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space between logo and navigation */
 }
+/* Logo image styling */
 .main-header .logo img {
     width: 100px;
     height: 100px;
-    margin: 0 2em 0 0;
-    float: left;
+    margin-right: 0em; /* Reduced margin */
 }
-/* Navigation */
+
+/* Navigation menu styling */
 .main-menu {
-    margin-left: 227px;
-    font-weight: 400;
+    display: flex;
 }
+/* Unordered list within the navigation */
+.main-menu ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+/* List items within the navigation */
 .main-menu ul li {
-    list-style-type: none;
-    display: inline-block;
-    float: left;
-    padding-left: 25px;
-    padding-right: 25px;
-    border-left: 1px solid rgba(202, 204, 202, 0.6);
-    line-height: 100px;
-    text-transform: uppercase;
+    list-style-type: none; /* Remove default list styling */
+    padding: 0 25px; /* Reduced padding */
+    line-height: 100px; /* Align items vertically */
+    text-transform: uppercase; /* Uppercase text */
     font-size: 14px;
     font-weight: bold;
+    border-left: 1px solid rgba(202, 204, 202, 0.6); /* Left border */
 }
+/* Remove border from the first list item */
+.main-menu ul li:first-child {
+    border-left: none;
+}
+/* Link styling within the navigation */
 .main-menu ul li a {
-    text-decoration: none;
-    color: #888;
+    text-decoration: none; /* Remove underline */
+    color: #888; /* Grey color */
 }
+/* Hover effect for the navigation links */
 .main-menu ul li a:hover {
-    color: #9ed034;
+    color: #9ed034; /* Change color on hover */
 }
+/* Active navigation item styling */
 .main-menu ul li.active {
-    background: #9ed034;
-    border: none;
+    background: #9ed034; /* Background color */
 }
 .main-menu ul li.active a {
-    color: #fff;
+    color: #fff; /* White text color */
 }
-/* Main */
-.text-section {
-    padding-top: 50px;
-    padding-bottom: 50px;
-    font-family: Arial, Helvetica, sans-serif;
-    padding-left: 65px;
-    font-weight: bold;
+
+/* Main content boxes */
+.content-box {
+    background: #f9f9f9; /* Light grey background */
+    padding: 20px;
+    margin: 15px; /* Margin around each box */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 3D box shadow */
+    transition: transform 0.3s; /* Smooth transform transition */
 }
-.text-section h2 {
-    color: #9ed034;
-    font-weight: bold;
-    font-size: 40px;
-} 
-.text-section h3 {
-    font-weight: bold;
-    font-size: 30px;
+/* Hover effect for the content boxes */
+.content-box:hover {
+    transform: translateY(-5px); /* Slightly lift the box */
 }
-/* Partners */
-section {
+/* Flexbox layout for the row containing the content boxes */
+.row {
+    display: flex;
+    justify-content: space-between; /* Space between the boxes */
+    margin: 0 -15px; /* Negative margin to compensate for child margins */
+}
+/* Content box styling within the flexbox row */
+.content-box {
+    margin: 15px; /* Margin around each box */
+    flex: 1; /* Allow the boxes to grow and shrink equally */
+}
+
+
+
+/* Partners section styling */
+#partners {
     width: 100%;
     background-color: #4288c3;
-}
-section #partners {
-    width: 1200px;
-    padding: 2em 0 2em 0;
-    margin: 0 auto;
+    padding: 2em 0;
+    margin: 0; /* Remove any top margin */
     text-align: center;
 }
-section #partners .partner {
-    display: inline-block;
-    margin: 0 0.75em;
-    padding: 1.3em 1.5em;
-    background-color: #fff;
-    border-radius: 50%;
+
+/* Flexbox layout for partner columns to center the images */
+.partner-col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px; /* Reduce padding between the images */
 }
-section #partners .partner img {
+
+/* Styling for partner images */
+.partner-col img {
     width: 90px;
     height: 90px;
+    border-radius: 50%; /* Make the images circular */
+    background-color: #fff; /* White background */
+    padding: 10px; /* Reduce padding around the images */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add 3D shadow effect */
+    transition: transform 0.3s; /* Smooth transform transition */
 }
+
+/* Hover effect for partner images */
+.partner-col img:hover {
+    transform: translateY(-5px); /* Lift the image slightly on hover */
+}
+
+/* Remove gap between footer and partners section */
+footer {
+    margin-top: 0; /* Remove any top margin */
+    padding-top: 0; /* Remove any top padding */
+}
+
+
 /* Table */
 table {
     width: 1000px;
@@ -341,9 +383,6 @@ footer .nondisclaimer .social .fa-instagram {
     width: 100%;
 }
 
-/* Existing styles here */
-
-/* Existing styles here */
 
 /* Display Box Styles */
 #activities main #displaySelected {
