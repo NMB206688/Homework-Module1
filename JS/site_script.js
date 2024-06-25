@@ -48,18 +48,18 @@ document.addEventListener("DOMContentLoaded", function () {
         const partnerCols = document.querySelectorAll('.partner-col'); // Get all partner column elements
 
         // Apply different Bootstrap classes based on the screen width
-        if (width >= 990) {
-            // For screens 990px and above, use the original design
+        if (width >= 992) {
+            // For screens 992px and above, use the original design
             partnerCols.forEach(col => {
                 col.className = 'col-6 col-sm-4 col-md-3 col-lg-2 partner-col';
             });
-        } else if (width >= 570) {
-            // For screens between 570px and 989px, use 3 columns and 2 rows
+        } else if (width >= 576) {
+            // For screens between 576px and 991px, use 3 columns and 2 rows
             partnerCols.forEach(col => {
                 col.className = 'col-6 col-sm-6 col-md-4 partner-col';
             });
         } else {
-            // For screens below 570px, use 1 column layout
+            // For screens below 576px, use 1 column layout
             partnerCols.forEach(col => {
                 col.className = 'col-12 partner-col'; // Single column layout
             });

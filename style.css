@@ -9,10 +9,7 @@ header {
     background: no-repeat lightgrey url(images/cliff_ocean.jpg);
     background-size: cover;          
 }
-#activities header {
-    background: no-repeat lightgrey url(images/runfly.jpg);
-    background-size: cover;
-}
+
 #contact header {
     background: no-repeat lightgrey url(images/cliff_rock.jpg);
     background-size: cover;
@@ -76,7 +73,12 @@ header {
     background: #9ed034; /* Background color */
 }
 .main-menu ul li.active a {
-    color: #fff; /* White text color */
+    color: #ffffff; /* White text color */
+}
+/* Bootstrap navbar active item */
+.navbar-nav .nav-item.active .nav-link {
+    background: #9ed034; /* Background color */
+    color: #ffffff; /* White text color */
 }
 
 /* Main content boxes */
@@ -97,6 +99,7 @@ header {
     display: flex;
     justify-content: space-between; /* Space between the boxes */
     margin: 0 -15px; /* Negative margin to compensate for child margins */
+    flex-wrap: wrap; /* Ensure the row wraps on smaller screens */
 }
 /* Content box styling within the flexbox row */
 .content-box {
@@ -104,13 +107,11 @@ header {
     flex: 1; /* Allow the boxes to grow and shrink equally */
 }
 
-
-
 /* Partners section styling */
 #partners {
     width: 100%;
     background-color: #4288c3;
-    padding: 2em 0;
+    padding: 1em 0; /* Reduced padding */
     margin: 0; /* Remove any top margin */
     text-align: center;
 }
@@ -140,62 +141,119 @@ header {
 }
 
 /* Remove gap between footer and partners section */
+#partners {
+    margin-bottom: 0; /* Ensure there is no margin at the bottom */
+    padding-bottom: 0; /* Ensure there is no padding at the bottom */
+}
+
 footer {
     margin-top: 0; /* Remove any top margin */
     padding-top: 0; /* Remove any top padding */
 }
 
+/* Responsive Table */
+.table-responsive {
+    overflow-x: auto;
+    margin: 4em auto 3em auto; /* Center the table with margins */
+    text-align: center; /* Center the table within the container */
+}
 
 /* Table */
 table {
-    width: 1000px;
-    margin: 4em auto 3em auto; /* Adjusted the bottom margin to create space */
+    width: 80%; /* Reduce the table width */
+    margin: 0 auto; /* Center the table horizontally */
+    border-collapse: collapse;
 }
+
 caption {
     background: #852b1b;
-    height: 40px;
+    height: 50px;
     color: #fff;
     font-size: 1.3em;
     font-weight: bold;
-    padding-top: 1em;
+    padding-top: .5em;
+    caption-side: top; /* Ensure the caption is at the top */
+    text-align: center; /* Center the caption text */
 }
+
 thead {
-    background: #bde1ff;
+    background: #65b2f1;
+    font-weight: bold;
+    border: solid 5px #852b1b;
 }
+
 tbody {
     background: #eeffe6;
     text-align: center;
 }
+
 th, td {
-    width: 225px;
+    min-width: 100px; /* Reduce the minimum width for each cell */
     height: 75px;
     vertical-align: middle;
-    border: solid 1px #852b1b;
+    border: solid 5px #852b1b;
+    text-align: center;
+    font-weight: bold;
+    vertical-align: middle;
 }
+
 th:first-child {
-    width: 125px;
-    height: 50px;
-    background: #4977d1;
-    color: #fff;
+    min-width: 125px;
+    background: #65b2f1;
+    color: #1a1919;
+    font-weight: bold;
+
 }
+
 td:first-child {
     font-weight: bold;
     background: #bde1ff;
+    font-family: 'Courier New', Courier, monospace;
 }
+
 .selectable:hover {
     cursor: pointer;
 }
+
 .highlighted {
     background-color: rgb(176, 247, 12); /* Highlight color */
 }
+
 main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensure the main section takes at least the full viewport height */
     padding-bottom: 3em; /* Added padding to the main section */
 }
+
+.text-section {
+    text-align: center;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    
+    font-weight: bold;
+   
+}
+
+.text-section h2{
+    color: rgb(176, 247, 12);
+}
+/* Ensure header background image is responsive */
+.header-bg {
+    background-image: url('images/header-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: auto;
+}
+
 /* Contact Style */
 .phone-mail {
     padding-bottom: 50px;
     font-family: Arial, Helvetica, sans-serif;
-    padding-left: 65px;
+    padding-left: 9px;
     font-weight: bold;
 }
 .phone-mail .phone #phone-text:first-child {
@@ -211,33 +269,26 @@ legend {
 }
 label {
     display: block;
-    margin: 10px;
+    margin: 10px 0;
     font-weight: bold;
 }
-input {
-    width: 600px;
-    padding: 12px 20px;
-    margin: 8px 0;
+input, textarea {
+    width: 100%;
+    padding: 12px 30px;
+    margin: 10px 0;
     display: inline-block;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 5px;
     box-sizing: border-box;
 }
 input[type="radio"] {
-    width: 25px;
+    width: auto;
 }
 textarea {
-    width: 600px;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
     border-radius: 10px;
-    box-sizing: border-box;
 }
 input[type=submit] {
-    width: 100px;
-    /*background-color: #53abf3;*/
+    width: 100%;
     color: white;
     padding: 14px 20px;
     margin: 5px 0;
@@ -249,11 +300,15 @@ input[type=submit]:hover {
     background-color: #0871b8;
 }
 .form {
+    display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 35px;
+    padding: 100px;
     font-family: Arial, Helvetica, sans-serif;
 }
+
+
+
 /* Cliff Page style */
 .image-container {
     display: grid;
@@ -382,7 +437,6 @@ footer .nondisclaimer .social .fa-instagram {
 .box img {
     width: 100%;
 }
-
 
 /* Display Box Styles */
 #activities main #displaySelected {
