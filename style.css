@@ -477,4 +477,94 @@ footer .nondisclaimer .social .fa-instagram {
     background-color: #8ff709; /* Highlight color */
 }
 
-/* Existing styles here */
+
+
+/* Style for the header background image */
+.header-bg {
+    
+   
+    position: relative; /* Position relative to contain the overlay */
+    display: flex; /* Flexbox to center the text */
+    align-items: center; /* Vertically center the text */
+    justify-content: center; /* Horizontally center the text */
+    color: white; /* White text color */
+    text-align: center; /* Center text alignment */
+    font-size: 2em; /* Larger font size */
+}
+
+/* Style for the custom navbar */
+.navbar-custom {
+    position: absolute; /* Absolute positioning within the header */
+    width: 80%; /* Reduced width */
+    margin: 0 auto; /* Center the navbar */
+    top: 20px; /* Initial top position */
+    font-weight: bold;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* High z-index to ensure it stays on top */
+    background-color: rgba(38, 41, 61, 0.7); /* Background color with transparency */
+    border-radius: 10px; /* Rounded corners for a better look */
+    padding: 10px; /* Padding for better spacing */
+    display: flex; /* Flexbox for alignment */
+    justify-content: space-between; /* Space between logo and links */
+    align-items: center; /* Vertically center the content */
+}
+
+/* Style for the navbar links container */
+.navbar-links {
+    display: flex; /* Flexbox for horizontal alignment */
+}
+
+/* Adjust margin to reduce space between the logo and links */
+.navbar-brand {
+    margin-right: 10px; /* Reduce space between logo and links */
+}
+
+/* Style for the navigation links */
+.navbar-custom .nav-link {
+    color: rgb(180, 235, 30); /* White text color */
+    margin: 0 10px; /* Reduce space between links */
+    padding: 10px 15px; /* Padding for 3D effect */
+    border-radius: 5px; /* Rounded corners for box effect */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 3D box shadow effect */
+    background-color: rgb(248, 242, 242); /* Background color for the links */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+    text-decoration: none; /* Remove underline */
+}
+
+/* Style for the active navigation link */
+.navbar-custom .nav-link.active {
+    background-color: rgb(123, 219, 14); /* Green background for active link */
+    color: white; /* White text color */
+}
+
+/* Hover effect for navigation links */
+.navbar-custom .nav-link:hover {
+    background-color: rgba(199, 241, 11, 0.979); /* Change background on hover */
+    color: rgb(255, 255, 255); /* Ensure text color remains white */
+    box-shadow: 0 6px 8px rgba(243, 241, 241, 0.15); /* Enhance 3D effect on hover */
+}
+
+/* Sticky class for the navbar when scrolled */
+.navbar-custom.sticky {
+    position: fixed; /* Fixed positioning when sticky */
+    top: 0; /* Stick to the top */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust positioning to center */
+    width: 80%; /* Make it full-width when sticky */
+    border-radius: 10px; /* Remove rounded corners when sticky */
+}
+
+/* Style for the figcaptions */
+.figcaption-red-bold {
+    color: rgb(245, 241, 241); /* Dark red color for the text */
+    font-weight: bold; /* Bold text */
+    text-align: center; /* Center the text */
+    background-color: rgba(128, 4, 4, 0.87); /* Optional: background color to make the text more visible */
+    padding: 5px; /* Optional: padding for better spacing */
+    border-radius: 5px; /* Optional: rounded corners */
+    margin-top: 10px; /* Space between the image and caption */
+}
+
+
+
