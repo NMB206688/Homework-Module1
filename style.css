@@ -7,16 +7,20 @@ header {
 }
 #home header {
     background: no-repeat lightgrey url(images/cliff_ocean.jpg);
-    background-size: cover;          
+    background-size: 100% 400px;          
 }
 
 #contact header {
     background: no-repeat lightgrey url(images/cliff_rock.jpg);
-    background-size: cover;
+    background-size: 100% 400px; 
 }
 #cliffs header {
     background: no-repeat lightgrey url(images/forest_cliff.jpg);
-    background-size: cover;
+    background-size: 100% 400px; 
+}
+#activities header {
+    background: no-repeat lightgrey url(images/runfly.jpg);
+    background-size: 100% 400px; 
 }
 /* Styles for the main header which includes the logo and navigation for large screens */
 .main-header {
@@ -275,7 +279,7 @@ label {
 input, textarea {
     width: 100%;
     padding: 12px 30px;
-    margin: 10px 0;
+    margin: px 0;
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 5px;
